@@ -16,8 +16,8 @@
 		BA13B2A322831BC600066D28 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13B2A222831BC600066D28 /* GridViewController.swift */; };
 		BA21EF3822844714006BC23B /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF3722844714006BC23B /* GridCell.swift */; };
 		BA21EF3A228449DA006BC23B /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF39228449DA006BC23B /* GameLogic.swift */; };
-		BA21EF3C22844B06006BC23B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF3B22844B05006BC23B /* Track.swift */; };
-		BA21EF3E22844B57006BC23B /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF3D22844B57006BC23B /* CellModel.swift */; };
+		BA21EF3C22844B06006BC23B /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF3B22844B05006BC23B /* GameState.swift */; };
+		BA21EF3E22844B57006BC23B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21EF3D22844B57006BC23B /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		BA13B2A222831BC600066D28 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		BA21EF3722844714006BC23B /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		BA21EF39228449DA006BC23B /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		BA21EF3B22844B05006BC23B /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		BA21EF3D22844B57006BC23B /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		BA21EF3B22844B05006BC23B /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		BA21EF3D22844B57006BC23B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +146,8 @@
 		BA13B2B12283236900066D28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BA21EF3D22844B57006BC23B /* CellModel.swift */,
-				BA21EF3B22844B05006BC23B /* Track.swift */,
+				BA21EF3D22844B57006BC23B /* Cell.swift */,
+				BA21EF3B22844B05006BC23B /* GameState.swift */,
 				BA21EF39228449DA006BC23B /* GameLogic.swift */,
 			);
 			path = Model;
@@ -301,11 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA13B26F2283076900066D28 /* AppDelegate.swift in Sources */,
-				BA21EF3C22844B06006BC23B /* Track.swift in Sources */,
+				BA21EF3C22844B06006BC23B /* GameState.swift in Sources */,
 				BA13B2A322831BC600066D28 /* GridViewController.swift in Sources */,
 				BA21EF3A228449DA006BC23B /* GameLogic.swift in Sources */,
 				BA21EF3822844714006BC23B /* GridCell.swift in Sources */,
-				BA21EF3E22844B57006BC23B /* CellModel.swift in Sources */,
+				BA21EF3E22844B57006BC23B /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

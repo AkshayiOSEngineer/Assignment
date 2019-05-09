@@ -8,5 +8,12 @@
 
 import Foundation
 struct GameState  {
-   
+      var cells: [Cell] = []
+    subscript(index: Int) -> Cell {
+        get {
+            return cells[index]
+        } set {
+            cells[index] = newValue
+        }
+    }
 }

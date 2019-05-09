@@ -10,18 +10,25 @@ import UIKit
 let cellIdentifier = "CollectionViewCellIdentifier"
 class GridViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-  
-    
+    var dataSource: [Cell]  = []
+    let width = 20
+    let height = 20
+    var game: Game!
+    let gameState = GameState()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       game = Game(width: width, height: height)
+        self.display(gameState)
     }
-    
+    func display(_ state: GameState) {
+        self.dataSource = state.cells
+        collectionView.reloadData()
+    }
     
 }
 extension GridViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 200
+        return 10
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -30,6 +37,7 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellIdentifier, for: indexPath) as? GridCell {
+            cell.configureWith(dataSource[indexPath.item].isAlive)
              return cell
         }
         return UICollectionViewCell()

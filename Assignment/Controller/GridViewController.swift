@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let cellIdentifier = "CollectionViewCell"
+let cellIdentifier = "CollectionViewCellIdentifier"
 class GridViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
   
@@ -29,9 +29,13 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! UICollectionViewCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellIdentifier, for: indexPath) as? GridCell {
+             return cell
+        }
+        return UICollectionViewCell()
+        
      
-        return cell
+       
     }
     
    

@@ -37,7 +37,7 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier:cellIdentifier, for: indexPath) as? GridCell {
-            cell.configureWith(dataSource[indexPath.item].isAlive)
+           // cell.configureWith(dataSource[indexPath.item].isAlive)
              return cell
         }
         return UICollectionViewCell()
@@ -45,7 +45,10 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
      
        
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let squareSize: CGFloat = self.view.bounds.width / CGFloat(width)
+        return CGSize(width: squareSize, height: squareSize)
+    }
    
     
 }

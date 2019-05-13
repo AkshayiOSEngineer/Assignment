@@ -19,15 +19,15 @@ struct GameState {
     }
 }
 
-extension GameState: Equatable {
-    public static func == (lhs: GameState, rhs: GameState) -> Bool {
-        for lhsCell in lhs.cells {
-            for rhsCell in rhs.cells {
-                if lhsCell.isAlive != rhsCell.isAlive {
-                    return false
-                }
-            }
-        }
-        return true
-    }
-}
+//extension GameState: Equatable {
+//    public static func == (lhs: GameState, rhs: GameState) -> Bool {
+//        for lhsCell in lhs.cells {
+//            for rhsCell in rhs.cells {
+//                if lhsCell.isAlive != rhsCell.isAlive {
+//                    return false
+//                }
+//            }
+//        }
+//        return true
+//    }
+//}

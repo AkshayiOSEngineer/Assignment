@@ -33,6 +33,7 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return width * height
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,7 +44,7 @@ extension GridViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let squareSize: CGFloat = self.view.bounds.width / CGFloat(width)
-        return CGSize(width: (squareSize + CGFloat(10.0)), height: (squareSize + CGFloat(10.0)))
+        return CGSize(width: (squareSize), height: (squareSize ))
     }
     
 }
